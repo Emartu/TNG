@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [TestNG task]" parallel="methods">
+  <parameter name="expected" value="17"/>
+  <parameter name="first" value="2"/>
+  <parameter name="second" value="8"/>
+  <test name="Multtest(failed)" parallel="methods">
+    <parameter name="expected" value="17"/>
+    <parameter name="first" value="2"/>
+    <parameter name="second" value="8"/>
+    <groups>
+      <run>
+        <include name="positive"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.epam.testngtask.CalculatorTest">
+        <methods>
+          <include name="sumCheck" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.epam.testngtask.CalculatorTest -->
+      <class name="com.epam.testngtask.Multtest">
+        <methods>
+          <include name="testMult" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.epam.testngtask.Multtest -->
+    </classes>
+  </test> <!-- Multtest(failed) -->
+</suite> <!-- Failed suite [TestNG task] -->
