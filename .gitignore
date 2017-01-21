@@ -1,0 +1,5 @@
+test-output
+.idea/
+TestNGproject.iml
+src/main/
+target/generated-test-sources/
